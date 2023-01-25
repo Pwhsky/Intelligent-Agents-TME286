@@ -1,0 +1,13 @@
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NGramsApplication.exe.config
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NGramsApplication.exe
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NGramsApplication.pdb
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NaturalLanguageProcessing.dll
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NaturalLanguageProcessing.pdb
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csprojAssemblyReference.cache
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.MainForm.resources
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.Properties.Resources.resources
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csproj.GenerateResource.cache
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csproj.CoreCompileInputs.cache
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csproj.CopyComplete
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.exe
+C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.pdb
