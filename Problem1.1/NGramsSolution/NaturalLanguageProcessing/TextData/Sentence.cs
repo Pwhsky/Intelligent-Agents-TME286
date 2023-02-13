@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace NaturalLanguageProcessing.TextData
@@ -11,7 +14,6 @@ namespace NaturalLanguageProcessing.TextData
         private string text;
         private List<string> tokenList;
         private List<int> tokenIndexList;
-
         public Sentence()
         {
             tokenList = new List<string>();
@@ -28,10 +30,38 @@ namespace NaturalLanguageProcessing.TextData
         // many special cases to deal with!
         public void Tokenize()
         {
+            string wordToken;
 
-            // Add code here
+            text = text.ToLower();
 
+            //remove various symbols and characters, including periods.
+            text = text.Replace(",", "").Replace("!", "").Replace("''", "").Replace("(","").
+            Replace(")", "").Replace(":", "").Replace("  ", " ").Replace("?", "").Replace(" ?", "").Replace(".", "");
+
+            //Append words to tokenList & add periods to titles if they appear
+            string[] splitSentence = text.Split(' ');
+            foreach (string word in splitSentence)
+            {
+                if (word == "mr" || word == "dr" || word == "mrs" || word == "prof" || word == "st")
+                {
+                    wordToken = word + ".";
+                }
+                else
+                {
+                    wordToken = word;
+                }
+                //Ugly solution for the rare empty string occurence.
+                if (wordToken == "")
+                {
+                    continue;
+                }
+                tokenList.Add(wordToken);
+            }
+
+
+          
         }
+        
 
         public string Text
         {

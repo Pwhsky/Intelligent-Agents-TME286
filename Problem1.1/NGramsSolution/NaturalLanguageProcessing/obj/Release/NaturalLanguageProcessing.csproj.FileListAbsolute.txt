@@ -4,3 +4,9 @@ C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1
 C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Release\NaturalLanguageProcessing.dll
 C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Release\NaturalLanguageProcessing.pdb
 C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Release\NaturalLanguageProcessing.csprojAssemblyReference.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\bin\Release\NaturalLanguageProcessing.dll
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\bin\Release\NaturalLanguageProcessing.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Release\NaturalLanguageProcessing.csproj.AssemblyReference.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Release\NaturalLanguageProcessing.csproj.CoreCompileInputs.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Release\NaturalLanguageProcessing.dll
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Release\NaturalLanguageProcessing.pdb

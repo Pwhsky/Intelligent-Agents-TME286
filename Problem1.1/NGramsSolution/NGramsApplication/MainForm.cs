@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Forms;
 using NaturalLanguageProcessing.Dictionaries;
 using NaturalLanguageProcessing.NGrams;
 using NaturalLanguageProcessing.TextData;
+using System.Collections;
+using System.Xml.Linq;
 
 namespace NGramsApplication
 {
@@ -85,16 +88,19 @@ namespace NGramsApplication
         private void ShowAnalysis()
         {
             
-            // Add code here
+            for (int i = 0; i < analysisList.Count; i++)
+            {
+                analysisTextBox.Text += analysisList[i] + "\r\n";
+            }
+             
+
 
         }
-
         // This method should, in turn, call ShowAnalysis() in a thread-safe manner
         private void ThreadSafeShowAnalysis()
         {
-  
-            // Add code here
-
+            if (InvokeRequired) { this.Invoke(new MethodInvoker(() => ShowAnalysis())); }
+            else {ShowAnalysis(); }
         }
 
         private void ThreadSafeToggleButtonEnabled(ToolStripButton button, Boolean enabled)
@@ -161,26 +167,96 @@ namespace NGramsApplication
 
             // Step (1)
             // Find the 300 most common unigrams (from the dictionaries, after sorting
-            //     the dictionary items based on the number of instances:
-
+            // the dictionary items based on the number of instances:
+            Dictionary writtenUniGramDictionary = writtenDataSet.Dictionary;
             writtenUniGramSet = new NGramSet();
-
-             // Add code here
-
-            spokenUniGramSet = new NGramSet();
-
-             // Add code here
-
-            // Step (2) 
-            // Find the 300 most common bigrams, after generating the bigram sets,
-            //     one for the written data and one for the spoken using the NGramSet class 
-            //    (see the NGramSet class).
             writtenBiGramSet = new NGramSet();
-            
-             // Add code here for generating and sorting the written bigram set.
-             // Before sorting, run through the list and remove rare bigrams (speeds up
-             // the sorting - we are only interested in the most frequent bigrams anyway;
-             // see also the assignment text.
+            writtenTriGramSet = new NGramSet();
+
+            Dictionary spokenUniGramDictionary = spokenDataSet.Dictionary;
+            spokenUniGramSet = new NGramSet();
+            spokenBiGramSet = new NGramSet();
+            spokenTriGramSet = new NGramSet();
+
+
+            //Find shared tokens using nested for-loop and compute the ratios
+            //I added Ratio as a field to the DictionaryItem class for this.
+            Dictionary sharedTokens = new Dictionary();
+            List<double> ratioList = new List<double>();
+
+            double writtenSpokenRatio = 0;
+            for (int j = 0; j < spokenUniGramDictionary.ItemList.Count; j++) 
+            {  for (int i = 0; i < writtenUniGramDictionary.ItemList.Count; i++)
+                 {
+                     if (spokenUniGramDictionary.ItemList[j].Token == writtenUniGramDictionary.ItemList[i].Token)
+                     {
+                        writtenSpokenRatio = (double)writtenUniGramDictionary.ItemList[i].Count /
+                            (double)spokenUniGramDictionary.ItemList[j].Count;
+
+                        DictionaryItem dictionaryItem = new DictionaryItem(spokenUniGramDictionary.ItemList[j].Token);
+                        dictionaryItem.Ratio = writtenSpokenRatio;
+                        sharedTokens.ItemList.Add(dictionaryItem);
+                        break;
+                    }
+                }
+            }
+
+          
+            sharedTokens.bubbleSortRatio();
+            Dictionary smallestRatioValues = new Dictionary();
+            Dictionary largestRatioValues = new Dictionary();
+
+            int sharedTokensLength = sharedTokens.ItemList.Count-1;
+            //take the 50 elements at the start, and then at the end and append:
+            for (int i = 0; i < 50; i++)
+            {
+                DictionaryItem smallest = new DictionaryItem(sharedTokens.ItemList[i].Token);
+                DictionaryItem largest = new DictionaryItem(sharedTokens.ItemList[sharedTokensLength-i].Token);
+
+                smallest.Ratio = sharedTokens.ItemList[i].Ratio;
+                largest.Ratio = sharedTokens.ItemList[sharedTokensLength - i].Ratio;
+
+
+                smallestRatioValues.ItemList.Add(smallest);
+                largestRatioValues.ItemList.Add(largest);
+            }
+
+
+
+
+
+            // Add code here for generating and sorting the written bigram set.
+            // Before sorting, run through the list and remove rare bigrams (speeds up
+            // the sorting - we are only interested in the most frequent bigrams anyway;
+            // see also the assignment text.
+
+
+
+
+            //find unigrams
+            writtenUniGramSet.ItemList = writtenUniGramDictionary.get300MostFrequent();
+            spokenUniGramSet.ItemList = spokenUniGramDictionary.get300MostFrequent();
+
+            analysisList.Add("=========================================");
+            analysisList.Add("Written 1-grams: ");
+            analysisList.Add("=========================================");
+            for (int ii = 0; ii < NUMBER_OF_N_GRAMS_SHOWN; ii++)
+            {
+                analysisList.Add(writtenUniGramSet.ItemList[ii].AsString());
+            }
+            analysisList.Add("=========================================");
+            analysisList.Add("Spoken 1-grams: ");
+            analysisList.Add("=========================================");
+            for (int ii = 0; ii < NUMBER_OF_N_GRAMS_SHOWN; ii++)
+            {
+                analysisList.Add(spokenUniGramSet.ItemList[ii].AsString());
+            }
+
+
+
+            Dictionary writtenBiGramDictionary = writtenDataSet.Dictionary;
+            writtenBiGramSet.ItemList = writtenBiGramDictionary.generateBigramsList(writtenDataSet);
+
 
             analysisList.Add("=========================================");
             analysisList.Add("Written 2-grams: ");
@@ -191,12 +267,17 @@ namespace NGramsApplication
             }
 
 
-            spokenBiGramSet = new NGramSet();
 
-             // Add code here for generating and sorting the spoken bigram set.
-             // Before sorting, run through the list and remove rare bigrams (speeds up
-             // the sorting - we are only interested in the most frequent bigrams anyway;
-             // see also the assignment text.
+            // Add code here for generating and sorting the spoken bigram set.
+            // Before sorting, run through the list and remove rare bigrams (speeds up
+            // the sorting - we are only interested in the most frequent bigrams anyway;
+            // see also the assignment text.
+
+
+
+            Dictionary spokenBiGramDictionary = spokenDataSet.Dictionary;
+            spokenBiGramSet.ItemList = spokenBiGramDictionary.generateBigramsList(spokenDataSet);
+
 
             analysisList.Add("=========================================");
             analysisList.Add("Spoken 2-grams: ");
@@ -205,6 +286,7 @@ namespace NGramsApplication
             {
                 analysisList.Add(spokenBiGramSet.ItemList[ii].AsString());
             }
+
 
             // Step (3) 
             //     Find the 300 most common trigrams (after generating the trigram set.
@@ -217,6 +299,12 @@ namespace NGramsApplication
             // the sorting - we are only interested in the most frequent trigram anyway;
             // see also the assignment text.
 
+
+
+
+            Dictionary writtenTriGramDictionary = writtenDataSet.Dictionary;
+            writtenTriGramSet.ItemList = writtenTriGramDictionary.generateTrigramsList(writtenDataSet);
+
             analysisList.Add("=========================================");
             analysisList.Add("Written 3-grams: ");
             analysisList.Add("=========================================");
@@ -225,12 +313,15 @@ namespace NGramsApplication
                 analysisList.Add(writtenTriGramSet.ItemList[ii].AsString());
             }
 
-            spokenTriGramSet = new NGramSet();
 
             // Add code here for generating and sorting the spoken trigram set.
             // Before sorting, run through the list and remove rare trigrams (speeds up
             // the sorting - we are only interested in the most frequent trigrams anyway;
             // see also the assignment text.
+
+
+            Dictionary spokenTriGramDictionary = spokenDataSet.Dictionary;
+            spokenTriGramSet.ItemList = spokenTriGramDictionary.generateTrigramsList(spokenDataSet);
 
             analysisList.Add("=========================================");
             analysisList.Add("Spoken 3-grams: ");
@@ -239,6 +330,7 @@ namespace NGramsApplication
             {
                 analysisList.Add(spokenTriGramSet.ItemList[ii].AsString());
             }
+
 
             // Step (4) Using the dictionaries (one for the written set and one for the spoken),
             // Find the 50 tokens with the largest values of r and the 50 tokens with the
@@ -264,28 +356,40 @@ namespace NGramsApplication
             //
             // Add code here:
             //
-
+            
+            
             // Then store information about the number of tokens in each set, as well as the number of shared tokens:
             analysisList.Add("=========================================");
             analysisList.Add("Number of tokens:");
             analysisList.Add("=========================================");
-            analysisList.Add("Spoken set:  " + spokenDataSet.Dictionary.ItemList.Count.ToString());
             analysisList.Add("Written set: " + writtenDataSet.Dictionary.ItemList.Count.ToString());
+            analysisList.Add("Spoken set:  " + spokenDataSet.Dictionary.ItemList.Count.ToString());
+            analysisList.Add("No. of distinct unigrams in written set: " + writtenUniGramDictionary.ItemList.Count.ToString());
+            analysisList.Add("No. of distinct unigrams in spoken set: " + spokenUniGramDictionary.ItemList.Count.ToString());
+            analysisList.Add("=========================================");
+
             //    analysisList.Add("Shared:      " ... Add code here ...)
+            analysisList.Add("Shared Tokens: " + sharedTokens.ItemList.Count.ToString());
 
             // Then store information about the 50 tokens with the highest r-values:
             analysisList.Add("=========================================");
             analysisList.Add("High-r tokens: ");
             analysisList.Add("=========================================");
-
+            for (int i = 0; i < largestRatioValues.ItemList.Count; i++)
+            {
+                analysisList.Add("r = "+ largestRatioValues.ItemList[i].Ratio + "  | " + largestRatioValues.ItemList[i].Token.ToString());
+            }
             // Add code here
 
             // Then store information about the 50 tokens with the lowest r-values:
             analysisList.Add("=========================================");
             analysisList.Add("Small-r tokens: ");
             analysisList.Add("=========================================");
-            
             // Add code here
+            for (int i = 0; i < smallestRatioValues.ItemList.Count; i++)
+            {
+                analysisList.Add("r = " + smallestRatioValues.ItemList[i].Ratio + " | " + smallestRatioValues.ItemList[i].Token.ToString());
+            }
 
             // =================================================================
             // (5) Write a thread-safe method here for
@@ -296,6 +400,9 @@ namespace NGramsApplication
             // carry out more operations than just a single assignment...)
             // See also Appendix A.4 in the compendium.
             // ==================================================================
+
+
+
             ThreadSafeShowAnalysis();
 
             // =============================
@@ -323,9 +430,9 @@ namespace NGramsApplication
                 {
                     using (StreamWriter dataWriter = new StreamWriter(saveFileDialog.FileName))
                     {
-                        for (int ii = 0; ii < analysisTextBox.Lines.Count(); ii++)
+                        for (int ii = 0; ii < analysisList.Count(); ii++)
                         {
-                            dataWriter.WriteLine(analysisTextBox.Lines[ii]);
+                            dataWriter.WriteLine(analysisList[ii]);
                         }
                         dataWriter.Close();
                     }

@@ -15,3 +15,9 @@ C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.1\NGramsSolution\N
 C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Debug\NaturalLanguageProcessing.csproj.CoreCompileInputs.cache
 C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Debug\NaturalLanguageProcessing.dll
 C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Debug\NaturalLanguageProcessing.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\bin\Debug\NaturalLanguageProcessing.dll
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\bin\Debug\NaturalLanguageProcessing.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Debug\NaturalLanguageProcessing.csproj.AssemblyReference.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Debug\NaturalLanguageProcessing.csproj.CoreCompileInputs.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Debug\NaturalLanguageProcessing.dll
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NaturalLanguageProcessing\obj\Debug\NaturalLanguageProcessing.pdb

@@ -37,3 +37,17 @@ C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.1\NGramsSolution\N
 C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.csproj.CopyComplete
 C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.exe
 C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Debug\NGramsApplication.exe.config
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Debug\NGramsApplication.exe
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Debug\NGramsApplication.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Debug\NaturalLanguageProcessing.dll
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Debug\NaturalLanguageProcessing.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.csproj.AssemblyReference.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.MainForm.resources
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.Properties.Resources.resources
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.csproj.GenerateResource.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.csproj.CoreCompileInputs.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.csproj.CopyComplete
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.exe
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Debug\NGramsApplication.pdb

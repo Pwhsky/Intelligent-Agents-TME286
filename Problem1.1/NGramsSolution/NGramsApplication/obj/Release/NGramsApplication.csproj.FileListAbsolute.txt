@@ -11,3 +11,17 @@ C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1
 C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csproj.CopyComplete
 C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.exe
 C:\Data\Chalmers work\Teaching\Intelligent agents, 2023\Assignments\Assignment 1\Src\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NaturalLanguageProcessing.dll
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NaturalLanguageProcessing.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csproj.AssemblyReference.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.MainForm.resources
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.Properties.Resources.resources
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csproj.GenerateResource.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csproj.CoreCompileInputs.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.exe
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NGramsApplication.exe.config
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NGramsApplication.exe
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\bin\Release\NGramsApplication.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.1\NGramsSolution\NGramsApplication\obj\Release\NGramsApplication.csproj.CopyComplete

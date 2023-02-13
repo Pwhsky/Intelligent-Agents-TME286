@@ -10,7 +10,7 @@ namespace NaturalLanguageProcessing.Dictionaries
     {
         private string token;
         private int count;
-
+        private double ratio;
         public DictionaryItem(string token)
         {
             this.token = token;
@@ -26,6 +26,11 @@ namespace NaturalLanguageProcessing.Dictionaries
         {
             get { return count; }
             set { count = value; }
+        }
+        public double Ratio
+        {
+            get { return ratio; }
+            set { ratio = value; }
         }
     }
 }
