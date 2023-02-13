@@ -78,3 +78,14 @@ C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSo
 C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.csproj.CoreCompileInputs.cache
 C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.exe
 C:\Users\TempUser\Downloads\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\bin\Debug\NaiveBayesApplication.exe.config
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\bin\Debug\NaiveBayesApplication.exe
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\bin\Debug\NaiveBayesApplication.pdb
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.csproj.AssemblyReference.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.MainForm.resources
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.Properties.Resources.resources
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.csproj.GenerateResource.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.csproj.CoreCompileInputs.cache
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.exe
+C:\Users\Alex Lech\Desktop\StartingPointAssignment1\Problem1.2\Src\NaiveBayesSolution\NaiveBayesApplication\obj\Debug\NaiveBayesApplication.pdb

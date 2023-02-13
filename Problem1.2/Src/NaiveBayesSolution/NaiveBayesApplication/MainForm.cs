@@ -53,10 +53,8 @@ namespace NaiveBayesApplication
         {
             findPriorProbabilitiesButton.Enabled = false;
             documentClassifier = new BayesianDocumentClassifier();
+            documentClassifier.ComputePriorProbabilities(trainingDocumentList);
 
-            //
-            // Add code here: Compute the (two) entries of the documentClassifier.PriorProbabilitiesList
-            //
 
             // Display on-screen: Already completed, no need to change below this line, for this method
             List<string> informationList = new List<string>();

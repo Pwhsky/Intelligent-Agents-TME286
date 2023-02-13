@@ -38,14 +38,19 @@ namespace NaiveBayesApplication
         // To do: Write this method.
         public void Clean()
         {
-            // Step 1: Convert the raw data string to lower-case. Hint: use ToLower()
-
+            // Step 1: Convert the raw data string to lower-case. Hint: use ToLower()[done]
+            rawData = rawData.ToLower();
 
             // Step 2: Clean the raw data strings by
             // (a) removing special characters, e.g. " , ( , ) , { , } , [ , ] , <, >, -, ... and so on.
             //     Hint: Repeatedly use the Replace() method (taking two strings as input)
             //           Do not worry about performance - the data set is small in this case.
-            //
+            rawData = rawData.Replace(" '", " ").Replace("' ", " ").
+                Replace(",", "").Replace("(", "").Replace(")", "").Replace("-", " ").Replace("!", "").
+                Replace("?", "").Replace("[", "").Replace("]", "").Replace("{", "").Replace("}", "").
+                Replace("[", "").Replace("]", "").Replace("''", "").Replace(".","").Replace("*","");
+
+
             //     Notes: (1) remove also the ' character *when it is used as a quote*, e.g.
             //                as in: 'worst restaurant ever'. However, make sure to *keep*
             //                the ' character in contractions such as don't, won't, can't etc.
@@ -61,7 +66,11 @@ namespace NaiveBayesApplication
         public void Tokenize()
         {
             Char[] splitList = new char[] { ' ', ',', ';', '.', '!', '?' };
-
+            string[] splitSentence = rawData.Split(' ');
+            foreach (string word in splitSentence)
+            {
+                tokenList.Add(word);
+            }
             // Tokenize the raw data string into words,
             // removing ' ' and any interpunction characters characters, e.g. , . ! ? ...
             // Hint: Use the Split() command and the split list defined above.
@@ -71,9 +80,20 @@ namespace NaiveBayesApplication
         // To do: Write this method.
         public void RemoveStopWords(List<string> stopWordList)
         {
+
+            foreach (string stopWord in stopWordList)
+            {
+                for (int i = 0; i < tokenList.Count(); i++)
+                {
+                    if (tokenList[i].Contains(stopWord)) {
+                    tokenList[i].Replace(stopWord,"");
+                    }
+                }
+            }
             // Write a method for removing stop words
             // Hint: Apply the Contains() method to the stopWordList,
             // with the current token as input
+     
 
         }
 
